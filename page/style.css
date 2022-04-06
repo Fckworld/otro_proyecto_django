@@ -20,12 +20,9 @@ nav.navbar.navbar-expand-lg{
     color:#00C7FE;
     font-size: 24px;
 }
-#col_izq{
-    text-align: center;
-}
+
 #banner_mas{
     background: linear-gradient(#1731DB,#6BE0FF );
-    height: 300px;
 }
 #mas_button{
     width: 300px;
