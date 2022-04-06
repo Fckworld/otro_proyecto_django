@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Leelawadee;
+    src: url(leelawad.ttf);
+}
+@font-face {
+    font-family: berlin_sans;
+    src: url(Berlin_Sans_FB_Regular.ttf);
+}
+*{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+nav.navbar.navbar-expand-lg{
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav.nav-fill.w-100 li a{
+    font-family: Leelawadee;
+    color:#00C7FE;
+    font-size: 24px;
+}
+#col_izq{
+    text-align: center;
+}
+#banner_mas{
+    background: linear-gradient(#1731DB,#6BE0FF );
+    height: 300px;
+}
+#mas_button{
+    width: 300px;
+    height: 70px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid black;
+    border-style: solid;
+}
+#descubre_titulo{
+    text-align: center;
+    width: 400px;
+    color: white;
+    font-family: berlin_sans;
+}
