@@ -22,19 +22,27 @@ nav.navbar.navbar-expand-lg{
 }
 
 #banner_mas{
-    background: linear-gradient(#1731DB,#6BE0FF );
+    background: linear-gradient(#1774DB,#6BE0FF );
+
 }
 #mas_button{
-    width: 300px;
-    height: 70px;
+    padding: 1px 30px;
     background-color: transparent;
-    border-radius: 30px;
-    border: 1px solid black;
+    border-radius: 60px;
+    border: 0.5px solid gray;
     border-style: solid;
+    font-family: berlin_sans;
+    font-size: 55px;
+    color: white;
+
 }
 #descubre_titulo{
     text-align: center;
     width: 400px;
     color: white;
     font-family: berlin_sans;
+}
+#imagen_estatica{
+    width: 300px;
+
 }
