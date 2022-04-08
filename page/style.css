@@ -35,9 +35,9 @@ nav.navbar.navbar-expand-lg{
     width: 300px;
 
 }
-#descubre_titulo{
+h1{
     text-align: center;
-    width: 400px;
+    font-size: 50px;
     color: white;
     font-family: berlin_sans;
 }
@@ -52,6 +52,7 @@ nav.navbar.navbar-expand-lg{
     un tamanio maximo*/
     max-width: 100%;
     width: 400px;
+
     
 }
 @media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
@@ -67,5 +68,11 @@ nav.navbar.navbar-expand-lg{
     #lgo{
      width: 210px;
    }
+   h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: berlin_sans;
+}
 
  }
