@@ -26,14 +26,13 @@ nav.navbar.navbar-expand-lg{
 
 }
 #mas_button{
-    padding: 1px 30px;
     background-color: transparent;
     border-radius: 60px;
-    border: 0.5px solid gray;
-    border-style: solid;
+    border: 4px ridge rgba(167, 239, 255, 0.689);
     font-family: berlin_sans;
-    font-size: 55px;
+    font-size: 30px;
     color: white;
+    width: 300px;
 
 }
 #descubre_titulo{
@@ -46,3 +45,27 @@ nav.navbar.navbar-expand-lg{
     width: 300px;
 
 }
+#ecopura_log{
+    /*Aqui ajusto la imagen hasta un maximo de tamanio (400px) y que dentro del contenedor
+    tenga el 100% del ancho (que use todo el espacio).
+    Puedo ajustar el width-max 100% en boostrap con la clase, pero no me permite elegir
+    un tamanio maximo*/
+    max-width: 100%;
+    width: 400px;
+    
+}
+@media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
+     #lgo{
+        max-width: 100%;
+        width: 250px;
+    }
+    #ecopura_log{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #lgo{
+     width: 210px;
+   }
+
+ }
