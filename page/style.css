@@ -55,6 +55,13 @@ h1{
 
     
 }
+#img_prodc_1{
+    max-width: 100%;
+    width:300px;
+}
+#carrusel{
+    
+}
 @media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
      #lgo{
         max-width: 100%;
