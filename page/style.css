@@ -55,13 +55,17 @@ h1{
 
     
 }
+
 #img_prodc_1{
     max-width: 100%;
-    width:300px;
+    width: 300px;
+
 }
-#carrusel{
-    
+#espacio_carr{
+    background-color: grey;
+
 }
+
 @media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
      #lgo{
         max-width: 100%;

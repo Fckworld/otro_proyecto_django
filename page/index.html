@@ -58,30 +58,49 @@
     <hr class="mx-auto my-2 " style="width: 80%;">
 
     <!--Carrusel-->
-    <div id="carouselExampleIndicators" class="carousel slide mx-5" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      <div id="carrusel" class="carousel-inner">
+      <div id="carrusel" class="carousel-innerr">
         <div class="carousel-item active">
-          <div class="row">
+          <div id="espacio_carr" class="row">
             <!--No logro entender por que el align-middle no funcoina, igual tengo my-auto para centrarlo verticalmente-->
             <div class="col-sm-6 my-auto" >
-              <p class="text-center">Lorem ipsum dolor sit amet conntium placeat modios? Rerum nihilenetur!</p>
+              <h3 class="text-center">Nombre producto</h3>
+              <p id="descripcion_producto" class="text-center">Lorem ipsum dolor sit amet conntium placeat modios? Rerum nihilenetur!</p>
               <a href=""><h3 class="text-center">$2.500</h3></a>
             </div>
             <div class="col-sm-6">
+              <img class="" id="img_prodc_1" src="img/sobre-mesa-y-3-bidones.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div id="espacio_carr" class="row">
+            <div class="col-sm-6 my-auto" >
+              <h3 class="text-r">Nombre producto</h3>
+              <p id="descripcion_producto" class="text-center">Lorem ipsum dolor sit amet conntium placeat modios? Rerum nihilenetur!</p>
+              <a href=""><h3 class="text-center">$2.500</h3></a>
+            </div>
+            <div class="col-sm-6 d-flex justify-content-center">
               <img class="img-fluid" id="img_prodc_1" src="img/sobre-mesa-y-3-bidones.png" alt="">
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
+          <div id="espacio_carr" class="row">
+            <div class="col-sm-6 my-auto" >
+              <h3 class="text-center">Nombre producto</h3>
+              <p id="descripcion_producto" class="text-center">Lorem ipsum dolor sit amet conntium placeat modios? Rerum nihilenetur!</p>
+              <a href=""><h3 class="text-center">$2.500</h3></a>
+            </div>
+            <div class="col-sm-6 d-flex justify-content-center">
+              <img class="img-fluid" id="img_prodc_1" src="img/sobre-mesa-y-3-bidones.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
