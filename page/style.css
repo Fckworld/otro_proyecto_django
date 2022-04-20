@@ -11,6 +11,9 @@
     padding: 0;
     margin: 0;
 }
+img{
+    padding: 0;
+}
 nav.navbar.navbar-expand-lg{
     margin: 0;
     padding: 0;
@@ -86,4 +89,53 @@ h1{
     font-family: berlin_sans;
 }
 
+ }
+/*
+ Inicio de responsive-mobile, de menor a mayor
+*/
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up)
+*/
+
+#boton_precio{
+    min-width: 40%;
+    border-radius: 60px;
+    width: 30%;
+    border: 4px ridge rgba(0, 0, 0, 0.689);
+    transition-duration: 0.4s;
+    border-style: none;
+}
+#boton_precio:hover{
+
+    background-color: hwb(212 56% 2%);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.carousel-indicators .active{
+    background-color: rgb(112, 209, 247);
+}
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
  }
