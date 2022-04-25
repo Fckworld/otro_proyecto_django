@@ -5,25 +5,50 @@
 @font-face {
     font-family: berlin_sans;
     src: url(Berlin_Sans_FB_Regular.ttf);
+    
 }
 *{
+    font-family: Leelawadee;
     background-color: transparent;
     padding: 0;
     margin: 0;
+    font-variant-numeric:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: berlin_sans;
 }
 img{
     padding: 0;
 }
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
 nav.navbar.navbar-expand-lg{
     margin: 0;
     padding: 0;
+}
+
+footer{
+    background: linear-gradient(#1774DB,#6BE0FF );
+}
+footer img{
+    width: 30px;
+    height: 30px;
 }
 .navbar-nav.nav-fill.w-100 li a{
     font-family: Leelawadee;
     color:#00C7FE;
     font-size: 24px;
 }
-
+.carousel-indicators .active{
+    background-color: rgb(112, 209, 247);
+}
 #banner_mas{
     background: linear-gradient(#1774DB,#6BE0FF );
 
@@ -38,16 +63,6 @@ nav.navbar.navbar-expand-lg{
     width: 300px;
 
 }
-h1{
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    font-family: berlin_sans;
-}
-#imagen_estatica{
-    width: 300px;
-
-}
 #ecopura_log{
     /*Aqui ajusto la imagen hasta un maximo de tamanio (400px) y que dentro del contenedor
     tenga el 100% del ancho (que use todo el espacio).
@@ -58,16 +73,33 @@ h1{
 
     
 }
-
-#img_prodc_1{
-    max-width: 100%;
-    width: 300px;
-
-}
 #espacio_carr{
     background-color: grey;
+}
+#tarjetas img{
+    transition: transform .2s;
+    filter: blur(2px);
 
 }
+#tarjetas img:hover{
+    transform: scale(1.003);
+    filter: blur(0px);
+    
+}
+#ayuda{
+   max-height: 150px;
+}
+#boton_precio{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    min-width: 40%;
+    border-radius: 60px;
+    width: 30%;
+    color: white;
+    background: linear-gradient(#1774DB,#6BE0FF );
+    border-style: none;
+}
+
 
 @media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
      #lgo{
@@ -99,24 +131,12 @@ No media query for `xs` since this is the default in Bootstrap
 Small devices (landscape phones, 576px and up)
 */
 
-#boton_precio{
-    min-width: 40%;
-    border-radius: 60px;
-    width: 30%;
-    border: 4px ridge rgba(0, 0, 0, 0.689);
-    transition-duration: 0.4s;
-    border-style: none;
-}
-#boton_precio:hover{
 
-    background-color: hwb(212 56% 2%);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 
-.carousel-indicators .active{
-    background-color: rgb(112, 209, 247);
-}
+
+
 @media (min-width: 576px) { 
+
 
 }
 
@@ -139,3 +159,34 @@ Small devices (landscape phones, 576px and up)
 @media (min-width: 1400px) { 
     
  }
+
+
+ /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+  
+ 
+ 00000000000000000000000000000000000000000000000000000000
+ */
+
+
+ @media (max-width: 576px) { 
+
+}
+
+ @media (max-width: 768px) { 
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) { 
+   
+}
