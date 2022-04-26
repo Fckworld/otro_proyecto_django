@@ -50,9 +50,10 @@ footer img{
     background-color: rgb(112, 209, 247);
 }
 .card button{
-    z-index: 3;
-    position: relative; 
+    position: relative;
+    bottom: 30px;
 }
+
 #banner_mas{
     background: linear-gradient(#1774DB,#6BE0FF );
 
@@ -103,6 +104,7 @@ footer img{
     background: linear-gradient(#1774DB,#6BE0FF );
     border-style: none;
 }
+
 
 
 @media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
