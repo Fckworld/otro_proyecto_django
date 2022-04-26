@@ -49,6 +49,10 @@ footer img{
 .carousel-indicators .active{
     background-color: rgb(112, 209, 247);
 }
+.card button{
+    z-index: 3;
+    position: relative; 
+}
 #banner_mas{
     background: linear-gradient(#1774DB,#6BE0FF );
 
