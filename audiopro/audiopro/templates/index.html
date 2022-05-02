@@ -8,7 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
+    <title>
+      {%block title%}
+      Hello, world!
+      {%endblock%}
+    </title>
   </head>
   <body>
     <!--Navbar-->
@@ -127,15 +131,9 @@
 
     <!--Tarjetas
     <div id="tarjetas" class="card-group p-2">
-<<<<<<< HEAD
-      <div class="card">
-        <img id="hogar" src="img/drinking-water-hydrating.jpg" class="card-img-top" alt="...">
-        <button class="d-flex justify-content-end w-25">Hogar</button>
-=======
       <div class="card d-flex justify-content-center">
         <img id="hogar" src="img/drinking-water-hydrating.jpg" class="" alt="...">
         <button class="position-absolute">Hogar</button>
->>>>>>> 7d41e17c3b88ec6d36871d6b049a13502b3eccab
         <div class="card-body">
           <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
@@ -156,8 +154,8 @@
     <!--Ayuda-->
       <div class="row mx-auto">
         <div class="col-md-4 mx-auto">
-          <div id="ayuda" class="row border rounded-pill bg-white ms-2 d-flex justify-content-end mx-auto">
-            <div class="col ">
+          <div id="ayuda" class="row border rounded-pill bg-white ms-2 d-flex justify-content-center mx-auto">
+            <div class="col d-flex justify-content-end">
                <img class="mx-0 pe-2 img-fluid my-auto ps-0" style="width: 100px; height: 100px;" src="img/phone-contact.png" alt="">
             </div>
             <div class="col align-items-center ps-0">
