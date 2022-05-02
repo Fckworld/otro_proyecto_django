@@ -1,0 +1,240 @@
+@font-face {
+    font-family: Leelawadee;
+    src: url(leelawad.ttf);
+}
+@font-face {
+    font-family: berlin_sans;
+    src: url(Berlin_Sans_FB_Regular.ttf);
+    
+}
+*{
+    font-family: Leelawadee;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-variant-numeric:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: berlin_sans;
+}
+img{
+    padding: 0;
+}
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+nav.navbar.navbar-expand-lg{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    background: linear-gradient(#1774DB,#6BE0FF );
+}
+footer img{
+    width: 30px;
+    height: 30px;
+}
+.navbar-nav.nav-fill.w-100 li a{
+    font-family: Leelawadee;
+    color:#00C7FE;
+    font-size: 24px;
+}
+.carousel-indicators .active{
+    background-color: rgb(112, 209, 247);
+}
+.card button{
+    width: 100px;
+}
+.carousel.slide h2{
+    font-family: berlin_sans;
+}
+.carousel.slide p{
+    font-family: berlin_sans;
+}
+
+#banner_mas{
+    background: linear-gradient(#1774DB,#6BE0FF );
+
+}
+#mas_button{
+    background-color: transparent;
+    border-radius: 60px;
+    border: 4px ridge rgba(167, 239, 255, 0.689);
+    font-family: berlin_sans;
+    font-size: 30px;
+    color: white;
+    width: 300px;
+
+}
+#ecopura_log{
+    /*Aqui ajusto la imagen hasta un maximo de tamanio (400px) y que dentro del contenedor
+    tenga el 100% del ancho (que use todo el espacio).
+    Puedo ajustar el width-max 100% en boostrap con la clase, pero no me permite elegir
+    un tamanio maximo*/
+    max-width: 100%;
+    width: 400px;
+
+    
+}
+
+
+/*borrar css de tarjetas en caso de*/
+/*
+#tarjetas img{
+    transition: transform .2s;
+    filter: blur(2px);
+
+}
+#tarjetas img:hover{
+    transform: scale(1.003);
+    filter: blur(0px);
+    
+}
+*/
+#botones_compra img{
+    transition: transform .2s;
+    filter: blur(2px);
+
+}
+#botones_compra img:hover{
+    transform: scale(1.003);
+    filter: blur(0px);
+    
+}
+#ayuda{
+   max-height: 150px;
+}
+#boton_precio{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    border-radius: 60px;
+    color: white;
+    background: linear-gradient(#1774DB,#6BE0FF );
+    border-style: none;
+    width: 150px;
+
+}
+#botones_compra a{
+    font-family: berlin_sans;
+    z-index:1;
+    font-size: 25px;
+    width: 90%;
+    bottom: 30px;
+    position: absolute;
+    color: white;
+    border: 1px ridge rgb(66, 66, 66);
+    padding: 10px;
+    border-radius: 16px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) { /*Del 768 hacia abajo, tomara estas configuraciones*/
+     #lgo{
+        max-width: 100%;
+        width: 250px;
+    }
+    #ecopura_log{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    #lgo{
+     width: 210px;
+   }
+   h1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: berlin_sans;
+}
+
+ }
+/*
+ Inicio de responsive-mobile, de menor a mayor
+*/
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up)
+*/
+
+
+
+
+
+@media (min-width: 576px) {
+
+    
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #boton_precio{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 60px;
+        border-radius: 60px;
+        color: white;
+        background: linear-gradient(#1774DB,#6BE0FF );
+        border-style: none;
+        width: 300px;
+        height: 100px;
+    
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
+
+
+ /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+  
+ 
+ 00000000000000000000000000000000000000000000000000000000
+ */
+
+
+ @media (max-width: 576px) { 
+
+}
+
+ @media (max-width: 768px) { 
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) { 
+   
+}
