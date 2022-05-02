@@ -50,8 +50,13 @@ footer img{
     background-color: rgb(112, 209, 247);
 }
 .card button{
-    position: relative;
-    bottom: 30px;
+    width: 100px;
+}
+.carousel.slide h2{
+    font-family: berlin_sans;
+}
+.carousel.slide p{
+    font-family: berlin_sans;
 }
 
 #banner_mas{
@@ -78,9 +83,10 @@ footer img{
 
     
 }
-#espacio_carr{
-    background-color: grey;
-}
+
+
+/*borrar css de tarjetas en caso de*/
+/*
 #tarjetas img{
     transition: transform .2s;
     filter: blur(2px);
@@ -91,19 +97,43 @@ footer img{
     filter: blur(0px);
     
 }
+*/
+#botones_compra img{
+    transition: transform .2s;
+    filter: blur(2px);
+
+}
+#botones_compra img:hover{
+    transform: scale(1.003);
+    filter: blur(0px);
+    
+}
 #ayuda{
    max-height: 150px;
 }
 #boton_precio{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 30px;
-    min-width: 40%;
     border-radius: 60px;
-    width: 30%;
     color: white;
     background: linear-gradient(#1774DB,#6BE0FF );
     border-style: none;
+    width: 150px;
+
 }
+#botones_compra a{
+    font-family: berlin_sans;
+    z-index:1;
+    font-size: 25px;
+    width: 90%;
+    bottom: 30px;
+    position: absolute;
+    color: white;
+    border: 1px ridge rgb(66, 66, 66);
+    padding: 10px;
+    border-radius: 16px;
+}
+
 
 
 
@@ -141,14 +171,26 @@ Small devices (landscape phones, 576px and up)
 
 
 
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+
+    
 
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-
+    #boton_precio{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 60px;
+        border-radius: 60px;
+        color: white;
+        background: linear-gradient(#1774DB,#6BE0FF );
+        border-style: none;
+        width: 300px;
+        height: 100px;
+    
+    }
  }
 
 /* Large devices (desktops, 992px and up)*/
