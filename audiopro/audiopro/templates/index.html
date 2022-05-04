@@ -1,5 +1,11 @@
+{% load static %}
+<!--TENGO QUE AGREGAR LOAD STATIC PARA PODER INGRESAR LOS ARCHIVOS CSS E IMAGENES
+NO OLVIDAR INGRESAR DIRECTORIO DE LOS STATICS EN SETTING.PY
+
+EN CADA IMAGEN Y LINK CCSS TENGO QUE AGREGAR LA DIRECCION MODO DJANGO
+-->
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,10 +13,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>
       {%block title%}
-      Hello, world!
+      Bienvenido a Ecopura!
       {%endblock%}
     </title>
   </head>
@@ -19,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light my-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img id="lgo" src="img/LOGO_ECOPURA_COLOR-1.png"class="img-fluid">
+          <img id="lgo" src="{%static 'img/LOGO_ECOPURA_COLOR-1.png' %}"class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -45,6 +51,8 @@
         </div>
       </div>
     </nav>
+    {%include "incrustada.html"%}
+    {%block content%}
     <!--Banner-->
     <div class="container-fluid">
       <div id="banner_mas"class="row">
@@ -54,7 +62,7 @@
         </div>
         <div class="col-md-4">
           <!--mw-100 no entendi muy bien, pero ajusta la wea al 100% dentro del contenedor sin salir-->
-          <img id="ecopura_log"  src="img/LOGO_ECOPURA_WITHOUTBACKG.png" alt="">
+          <img id="ecopura_log"  src="{%static 'img/LOGO_ECOPURA_WITHOUTBACKG.png'%}" alt="">
         </div>
       </div>
     </div>
@@ -73,7 +81,7 @@
               <button id="boton_precio" >$99.999</button>
             </div>
             <div class="col d-flex">
-              <img class="img-fluid" style="max-width:100%; width: 350px;" src="img/sobre-mesa-y-3-bidones.png" alt="">
+              <img class="img-fluid" style="max-width:100%; width: 350px;" src="{%static 'img/sobre-mesa-y-3-bidones.png'%}" alt="">
             </div>
           </div>
         </div>
@@ -86,7 +94,7 @@
               <button id="boton_precio">$99.999</button>
             </div>
             <div class="col">
-              <img class="img-fluid" style="max-width:100%; width: 350px;" src="img/sobre-mesa-y-3-bidones.png" alt="">
+              <img class="img-fluid" style="max-width:100%; width: 350px;" src="{%static 'img/sobre-mesa-y-3-bidones.png'%}" alt="">
             </div>
           </div>
         </div>
@@ -98,7 +106,7 @@
               <button id="boton_precio">$99.999</button>
             </div>
             <div class="col">
-              <img class="img-fluid" style="max-width:100%; width: 350px;" src="img/sobre-mesa-y-3-bidones.png" alt="">
+              <img class="img-fluid" style="max-width:100%; width: 350px;" src="{%static 'img/sobre-mesa-y-3-bidones.png'%}" alt="">
             </div>
           </div>
         </div>
@@ -112,41 +120,19 @@
     </div>
     <hr class="mt-1 w-75 mx-auto">
     <h1 class="mx-auto" style="color: black;">Nos Acomodamos a tus necesidades</h1>
-    
-
-
+    <!--Botones de compra-->
     <div id="botones_compra" class="row mx-0">
       <div class="col-sm-6 px-0 d-flex justify-content-center align-items-center position-relative">
-        <img src="img/drinking-water-hydrating.jpg" class="w-100" alt="">
+        <img src="{%static 'img/drinking-water-hydrating.jpg'%}" class="w-100" alt="">
         <a class="text-center" href="">Hogar</a>
       </div>
       <div class="col-sm-6 px-0 d-flex justify-content-center align-items-center position-relative">
-        <img src="img/isa-mantenimiento_plantas_agua-1.png"  class="w-100" alt="">
+        <img src="{%static 'img/isa-mantenimiento_plantas_agua-1.png'%}"  class="w-100" alt="">
         <a class="text-center" href="">Empresa</a>
       </div>
     </div>
-    
-
-
-
-    <!--Tarjetas
-    <div id="tarjetas" class="card-group p-2">
-      <div class="card d-flex justify-content-center">
-        <img id="hogar" src="img/drinking-water-hydrating.jpg" class="" alt="...">
-        <button class="position-absolute">Hogar</button>
-        <div class="card-body">
-          <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="img/isa-mantenimiento_plantas_agua-1.png" class="card-img-top" alt="...">
-        <button class="">Empresa</button>
-        <div class="card-body">
-          <p class="card-text text-center">This card has supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-  -->
+    {%endblock%}
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
   <!--Footer-->
@@ -156,7 +142,7 @@
         <div class="col-md-4 mx-auto">
           <div id="ayuda" class="row border rounded-pill bg-white ms-2 d-flex justify-content-center mx-auto">
             <div class="col d-flex justify-content-end">
-               <img class="mx-0 pe-2 img-fluid my-auto ps-0" style="width: 100px; height: 100px;" src="img/phone-contact.png" alt="">
+               <img class="mx-0 pe-2 img-fluid my-auto ps-0" style="width: 100px; height: 100px;" src="{%static 'img/phone-contact.png'%}" alt="">
             </div>
             <div class="col align-items-center ps-0">
               <h3 class="text-center text-fluid fs-5">¿Necesitas ayuda?</h3>
@@ -168,9 +154,9 @@
           </div>
         </div>
         <div class="col-md-4 d-flex justify-content-evenly align-items-center mt-4">
-          <a href=""><img src="img/580b57fcd9996e24bc43c521.png" alt=""></a>
-          <a href=""><img src="img/580b57fcd9996e24bc43c543.png" alt=""></a>
-          <a href=""><img src="img/584ac2d03ac3a570f94a666d.png" alt=""></a>
+          <a href=""><img src="{%static 'img/580b57fcd9996e24bc43c521.png'%}" alt=""></a>
+          <a href=""><img src="{%static 'img/580b57fcd9996e24bc43c543.png'%}" alt=""></a>
+          <a href=""><img src="{%static 'img/584ac2d03ac3a570f94a666d.png'%}" alt=""></a>
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <figcaption class="blockquote-footer text-center mt-2">DISEÑADO POR ECOPURA CHILE © 2021</figcaption>

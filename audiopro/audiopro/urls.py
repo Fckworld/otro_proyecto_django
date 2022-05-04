@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index
+from .views import index, hija
 
 urlpatterns = [
+    #PRIMER PARAMETRO PARA EL DIRECCIONAR CON URL, Y EL SEGUNDO ES EL NOMBRE DE LA FUNCION 
+    #QUE ESTA EN LAS VISTAS (NO OLVIDAR IMPORTARLAS).
     path('admin/', admin.site.urls),
-    path('ecopura/',index),
+    path('',index),
+    path('hijaurl/',hija),
 ]
