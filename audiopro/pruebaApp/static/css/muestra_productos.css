@@ -1,0 +1,7 @@
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}/*BORRAR AL TRASPASAR A DJANGO*/
+.card img{
+    max-width: 250px;
+}

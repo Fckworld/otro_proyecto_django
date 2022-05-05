@@ -12,9 +12,9 @@ from django.template import loader
 #TENGO QUE IR A SETTINGS PARA DECIRLE A DJANGO DONDE TIENE QUE CARGAR LAS PLANTILLAS
 from django.shortcuts import render
 
-def index(request):
+def inicio(request):
     #RENDER NECESITA 3 PARAMETROS, REQUEST, DIRECCION TEMPLATE, Y EL CONTEXTO QUE ES OPCIONAL
-    return render(request,'index.html')
+    return render(request,'inicio.html')
 
 def hija(request):
     return render(request,'hija.html')

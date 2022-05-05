@@ -17,7 +17,6 @@
 
 h1{
     text-align: center;
-    font-size: 50px;
     color: white;
     font-family: berlin_sans;
 }
@@ -49,9 +48,7 @@ footer img{
 .carousel-indicators .active{
     background-color: rgb(112, 209, 247);
 }
-.card button{
-    width: 100px;
-}
+
 .carousel.slide h2{
     font-family: berlin_sans;
 }
