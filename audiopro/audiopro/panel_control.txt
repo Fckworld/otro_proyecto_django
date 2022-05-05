@@ -1,0 +1,7 @@
+MANIPULACION DEL PANEL DE CONTROL DE DJANGO
+1) CREAR UN SUPER USUARIO.
+    python manage.py createsuperuser
+
+    ESTOS SON LOS QUE HICE PARA ESTE PROYECTO
+        user:sebastian
+        pass:admin

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pruebaApp',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'audiopro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/seba_/Documents/DUOC/Estudio_y_Proyectos/otro_proyecto_django/audiopro/audiopro/templates"],#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
+        'DIRS': ["C:/Users/seba_/Documents/DUOC/Estudio_y_Proyectos/otro_proyecto_django/audiopro/pruebaApp/templates"],#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'audiopro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', #MODIFICO AQUI PARA DEFINIR QUE MOTOR VOY A USAR
+        'NAME': 'testingecopura', #EL NOMBRE DE LA BASE DE DATOS QUE USARE(BASE DE DATOS CREADA CON EL GESTOR DE POSTGRESQL MANUELAMENTE.)
+        'USER':'postgres',
+        'PASSWORD':'admin',
+        'HOST':'127.0.0.1',
+        'DATABASE_PORT':'5432',
     }
 }
 
@@ -104,7 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us' ESTO SOLO CAMBIA EL IDIOMA DEL DJANGO ADMIN PANEL
+LANGUAGE_CODE = 'es-eu'
 
 TIME_ZONE = 'UTC'
 
@@ -120,5 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #DE AQUI HACIA ABAJO EMPIEZO A EDITAR YO, AGREGO ESTOS DIR PARA AGREGAR LOS ARCHIVOS STATICS
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'audiopro/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'pruebaApp/static'),)
 

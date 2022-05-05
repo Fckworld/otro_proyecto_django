@@ -1,4 +1,3 @@
-import django
 from django.http import HttpResponse
 from django.template import Template, Context #LIBRERIAS PARA USAR PLANTILLAS INDEX.HTML
 #ESTA SERIA LA MALA FORMA DE IMPORTAR UNA PLANTILLA
@@ -19,3 +18,10 @@ def index(request):
 
 def hija(request):
     return render(request,'hija.html')
+
+def busqueda_producto(request):
+    return render(request,'busqueda_producto.html')
+def muestra_productos(request):
+    return render(request,'muestra_productos.html')
+
+

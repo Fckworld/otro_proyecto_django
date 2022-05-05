@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index, hija
+from pruebaApp import views
 
 urlpatterns = [
     #PRIMER PARAMETRO PARA EL DIRECCIONAR CON URL, Y EL SEGUNDO ES EL NOMBRE DE LA FUNCION 
     #QUE ESTA EN LAS VISTAS (NO OLVIDAR IMPORTARLAS).
     path('admin/', admin.site.urls),
-    path('',index),
-    path('hijaurl/',hija),
+    path('',views.index),
+    path('hijaurl/',views.hija),
+    path('prod/',views.busqueda_producto),
+    path('muestrap',views.muestra_productos),
 ]
