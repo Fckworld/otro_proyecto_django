@@ -1,0 +1,62 @@
+
+@font-face {
+    font-family: berlin_sans;
+    src: url(Berlin_Sans_FB_Regular.ttf);
+    
+}
+@font-face {
+    font-family: Leelawadee;
+    src: url(leelawad.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-family: Leelawadee;
+}
+#contacto_css #texto_contacto{
+    display: none;
+    max-width: 100%;
+    width: 900px;
+}
+#contacto_css #formulario{
+    max-width: 100%;
+    width: 600px;
+}
+#contacto_css h1, h2{
+    font-family: berlin_sans;
+    text-align: center;
+    color:#00C7FE;;
+}
+#contacto_css h2{
+    font-family: berlin_sans;
+    text-align: center;
+    color:white;
+}
+
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #contacto_css #texto_contacto{
+        display: block;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }

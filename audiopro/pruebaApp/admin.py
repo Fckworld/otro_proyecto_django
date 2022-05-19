@@ -1,7 +1,8 @@
 from django.contrib import admin
 #AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA PODER MANIPULARLOS
 #DESDE EL PANEL DE CONTROL ADMIN DE DJANGO.
-from pruebaApp.models import Cliente, Producto, Pedido
+from pruebaApp.models import Cliente, Producto, Pedido, InfoContacto
+#AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA POD
 
 class ClientesAdmin(admin.ModelAdmin):
     #EL LIST_DISPLAY PREDOMINA SOBRE LA FUNCION CONSTRUCTOR DEL MODELO
@@ -17,6 +18,11 @@ class PedidosAdmin(admin.ModelAdmin):
     list_filter = ('fecha',)
     date_hierarchy = 'fecha'
 
-admin.site.register(Cliente,ClientesAdmin)
-admin.site.register(Producto,ProductosAdmin)
+class InfoContactoAdmin(admin.ModelAdmin):
+    list_display=('id','nombre_razon','correo','telefono','comuna')
+
+admin.site.register(InfoContacto,InfoContactoAdmin)
+
+admin.site.register(Cliente,ClientesAdmin)#LADO IZQUIERDO: NOMBRE DE LA CLASE QUE VOY A DESPLEGAR, LADO DERECHO: COMO VOY A DESPLEGARLO
+admin.site.register(Producto,ProductosAdmin )
 admin.site.register(Pedido,PedidosAdmin)

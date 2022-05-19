@@ -31,3 +31,13 @@ class Pedido(models.Model):
 #python manage.py sqlmigrate pruebaApp 0001
 #AHORA FALTA METER LAS TABLAS CREADA EN LA BASE DE DATOS CREADA CON ANTERIORIDAD.
 #python manage.py migrate
+
+class InfoContacto(models.Model):
+    nombre_razon = models.CharField(max_length=255)
+    rut = models.CharField(max_length=30)
+    correo = models.EmailField()
+    telefono = models.IntegerField()
+    comuna = models.CharField(max_length=30)
+    comentario = models.CharField(max_length=255)
+    def __str__(self):
+        return " Formulario contacto de: %s "%(self.nombre_razon)
