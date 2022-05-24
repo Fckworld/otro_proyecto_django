@@ -1,4 +1,6 @@
+from random import choices
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 
@@ -7,6 +9,12 @@ class Cliente(models.Model):
     direccion = models.CharField(max_length=50,verbose_name='LA FUCKING DIRECCION') #ESTO SOLO CAMBIA COMO SE MUESTRA AL AGREGAR EN DJANGO ADMIN
     email = models.EmailField(blank=True,null=True) #ESTO PERMITE INGRESAR DATOS EN BLANCO EN ADMIN
     telefono = models.CharField(max_length=12)
+
+    WHATEVER_CHOICE = '1'
+    SAMPLE_CHOICES = (
+        (WHATEVER_CHOICE, 'one'),
+    )
+    medio_pago = ArrayField(models.CharField(choices=SAMPLE_CHOICES,max_length=2,blank=True, default=WHATEVER_CHOICE),)
 
     def __str__(self):
         return "Clientexxxx: %s "%(self.nombre)
