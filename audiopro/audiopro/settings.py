@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'testingecopura', #EL NOMBRE DE LA BASE DE DATOS QUE USARE(BASE DE DATOS CREADA CON EL GESTOR DE POSTGRESQL MANUELAMENTE.)
         'USER':'postgres',
         'PASSWORD':'admin',
-        'HOST':'127.0.0.1',
+        'HOST':'localhost',
         'DATABASE_PORT':'5432',
     }
 }

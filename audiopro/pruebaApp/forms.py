@@ -10,8 +10,8 @@ class FormContacto(forms.ModelForm):
     class Meta:
         model = InfoContacto #ESTO ME PERMITE HEREDOR LOS CAMPOS DEL MODELO HECHO EN MODELDS
         fields = "__all__" #AQUI PERMITO QUE HEREDE TODOS LOS CAMPOS DEL MODELO
-
-
+        '''
+        ESTA MIERDE MUESTRA EL FORM Y QUE CAMPOS QUIERO MOSTRAR, PERO MEJOR LO HAGO EN VIEWS
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
@@ -27,4 +27,6 @@ class FormContacto(forms.ModelForm):
                 Submit('enviar_cont','Enviar',css_class="btn btn-danger")
             )
         )
+'''
+        
 
