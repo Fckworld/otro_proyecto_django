@@ -10,11 +10,40 @@
 #from django.template import loader
 #modulo para usar metodo get_template
 #TENGO QUE IR A SETTINGS PARA DECIRLE A DJANGO DONDE TIENE QUE CARGAR LAS PLANTILLAS
+from dataclasses import field
+from pyexpat import model
 from django.shortcuts import render
+from pruebaApp.models import Presentation
 from pruebaApp.forms import FormContacto
+from django.views.generic import ListView, CreateView, DetailView
+from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 
 
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import (HTML, Column, Div, Field,
+                                Hidden, Layout, MultiField,
+                                Row, Submit, Fieldset, Submit)
+
+class IndexView(ListView):
+    model= Presentation
+    context_object_name='formulario'
+    template_name= 'lista_form.html'
     
+    queryset= Presentation.objects.all()
+
+
+class CrearContacto(CreateView,SuccessMessageMixin):
+    form_class= FormContacto
+    template_name='indox.html'
+    success_url= reverse_lazy('pruebaApp:formulario_url')
+    success_message= 'GUARDADO COMPLETADO'
+
+
+class DetalleContacto(DetailView):
+    context_object_name = 'detallito'
+    model = Presentation
+    template_name = 'detallito.html'
 
 def inicio(request):
     #RENDER NECESITA 3 PARAMETROS, REQUEST, DIRECCION TEMPLATE, Y EL CONTEXTO QUE ES OPCIONAL
@@ -58,5 +87,6 @@ def contactotest(request):
     }
 
     return render(request,"info_form.html",datos)
+
 
 

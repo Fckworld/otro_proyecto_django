@@ -1,6 +1,5 @@
-from random import choices
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+
 
 # Create your models here.
 
@@ -34,6 +33,7 @@ class Pedido(models.Model):
 #python manage.py migrate
 
 class InfoContacto(models.Model):
+    
     nombre_razon = models.CharField(max_length=255)
     rut = models.CharField(max_length=30)
     correo = models.EmailField()
@@ -42,3 +42,25 @@ class InfoContacto(models.Model):
     comentario = models.CharField(max_length=255)
     def __str__(self):
         return " Formulario contacto de: %s "%(self.nombre_razon) #ESTO SOLO SE MUESTRA EN ADMIN
+
+class Speaker(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class Track(models.Model):
+    title = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.title
+
+class Presentation(models.Model):
+    title = models.CharField(max_length=35)
+    abstract = models.TextField(blank=False)
+    track = models.ForeignKey(Track, on_delete=models.PROTECT)
+    speaker = models.ForeignKey(Speaker, on_delete=models.PROTECT)
+
+    def __str__(self):
+        a = self.title
+        return a

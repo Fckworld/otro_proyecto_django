@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Lista de Presentations</h1>
+    <ul>
+        {% for p in formulario %}
+            <li>{{ p.title}} - {{ p.abstract }}</li>
+        {% empty %}
+            <li>No articles yet.</li>
+        {% endfor %}
+        </ul>
+</body>
+</html>

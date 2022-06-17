@@ -59,7 +59,8 @@ ROOT_URLCONF = 'audiopro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/seba_/Documents/DUOC/Estudio_y_Proyectos/otro_proyecto_django/audiopro/pruebaApp/templates"],#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
+        
+        'DIRS': (os.path.join(BASE_DIR,'pruebaApp/templates'),),#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

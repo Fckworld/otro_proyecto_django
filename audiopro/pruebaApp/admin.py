@@ -1,7 +1,7 @@
 from django.contrib import admin
 #AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA PODER MANIPULARLOS
 #DESDE EL PANEL DE CONTROL ADMIN DE DJANGO.
-from pruebaApp.models import Cliente, Producto, Pedido, InfoContacto
+from pruebaApp.models import Cliente, Producto, Pedido, InfoContacto, Speaker, Track, Presentation
 #AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA POD
 
 class ClientesAdmin(admin.ModelAdmin):
@@ -21,8 +21,20 @@ class PedidosAdmin(admin.ModelAdmin):
 class InfoContactoAdmin(admin.ModelAdmin):
     list_display=('id','nombre_razon','correo','telefono','comuna')
 
+class SpeakerAdmin(admin.ModelAdmin):
+    list_display=('name',)
+class TrackAdmin(admin.ModelAdmin):
+    list_display=('title',)
+
+class PresentationAdmin(admin.ModelAdmin):
+    list_display= ('title','abstract', 'track','speaker')
+
 admin.site.register(InfoContacto,InfoContactoAdmin)
 
 admin.site.register(Cliente,ClientesAdmin)#LADO IZQUIERDO: NOMBRE DE LA CLASE QUE VOY A DESPLEGAR, LADO DERECHO: COMO VOY A DESPLEGARLO
 admin.site.register(Producto,ProductosAdmin )
 admin.site.register(Pedido,PedidosAdmin)
+
+admin.site.register(Speaker,SpeakerAdmin)
+admin.site.register(Track,TrackAdmin)
+admin.site.register(Presentation,PresentationAdmin)
