@@ -1,3 +1,4 @@
+from curses import wrapper
 from dataclasses import field
 from django import forms
 from pruebaApp.models import Presentation
@@ -18,12 +19,12 @@ class FormContacto(forms.ModelForm):
         self.helper = FormHelper(self)
         self.helper.form_method = 'post'
         self.helper.layout = Layout(
-            HTML('<h1>asdsa</h1>'),
+         
             
         )
         for field in self.Meta().fields:
             self.helper.layout.append(
-                Field(field)
+                Field(field, wrapper_class='row mx-auto px-5')
             )
         
         self.helper.layout.append(Submit('submit','Guardar',css_class='btn-success'))
