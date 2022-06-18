@@ -12,38 +12,18 @@
     padding: 0;
     margin: 0;
 }
-p{
-    font-family: Leelawadee;
+form{
+    background-color: #343a40;
+    border-radius: 5px;
 }
-#contacto_css #texto_contacto{
-    display: none;
-    max-width: 100%;
-    width: 900px;
-}
-#contacto_css #formulario{
-    max-width: 100%;
-    width: 600px;
-}
-#contacto_css h1, h2{
-    font-family: berlin_sans;
-    text-align: center;
-    color:#00C7FE;;
-}
-#contacto_css h2{
-    font-family: berlin_sans;
-    text-align: center;
-    color:white;
-}
+
 
 @media (min-width: 576px) {
 
 }
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    #contacto_css #texto_contacto{
-        display: block;
-    }
+
  }
 
 /* Large devices (desktops, 992px and up)*/
