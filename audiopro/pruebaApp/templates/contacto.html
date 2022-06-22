@@ -1,50 +1,25 @@
-{%extends "base.html"%}
+{%extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
 {% load static %}
-{%block title%}
-Contacto
-{%endblock%}
-{%block content%}
-
-<div id="contacto_css" class="col my-5">
-  <div id="texto_contacto" class="container-fluid border border-1 p-3">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">Necesitas asesoria {{titulo}}</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti reiciendis ipsam in neque sequi, laboriosam, odio delectus corrupti dolorem labore assumenda alias, eius libero ratione quidem non. Cumque, nobis quidem?</p>
+{% block title %}
+Contactanos
+{% endblock %}
+{% block content%}
+{%include "navbar.html"%}
+<link rel="stylesheet" type= "text/css" href="{% static 'css/contacto_form.css'%}">
+<div id="texto_contacto" class="container-fluid border border-2 py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm">
+        <h1 class="text-left">Necesitas asesoria</h1>
+        <p class="mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti reiciendis ipsam in neque sequi, laboriosam, odio delectus corrupti dolorem labore assumenda alias, eius libero ratione quidem non. Cumque, nobis quidem?</p>
       </div>
-      <div class="col">
-        <img class="img-fluid" src="{% static 'img/isa-mantenimiento_plantas_agua-1.png'%}" alt="">
+      <div class="col-sm d-flex align-items-center">
+        <img class="img-fluid mx-auto" src="{% static 'img/isa-mantenimiento_plantas_agua-1.png'%}" alt="">
       </div>
     </div>
   </div>
-  <div class="mx-auto mt-5" id="formulario">
-    <form action="" method="POST" class="bg-dark px-5 py-3 rounded mx-5"> {%csrf_token%}
-      <div class="my-3">
-        <input type="text" class="form-control" name="nombre_form" placeholder="Nombre o Razon Social:">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" name="rut_form" placeholder="Rut:">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" name="correo_form" placeholder="Correo:">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" name="telefono_form" placeholder="Telefono:">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" name="comuna_form" placeholder="Comuna:">
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" name="comentario_form" rows="3" placeholder="Comentario:"></textarea>
-      </div>
-      <div class="container">
-        <h2>ECOPURA</h1>
-        <h2>AGUA PURIFICADA</h2>
-      </div>
-      <div class="d-flex justify-content-center mt-3">
-        <button type="submit" class="btn btn-light btn-sm" value="respuesta_contacto">Enviar</button>
-      </div>
-    </form>
-  </div>
-</div>
-{%endblock%}
+{% crispy form%}
+{% endblock%}
+
+

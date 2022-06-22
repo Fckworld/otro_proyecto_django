@@ -9,33 +9,43 @@ from crispy_forms.bootstrap import FormActions
 class FormContacto(forms.ModelForm):
     #EN INIT ES CUANDO EMPIEZO A CUSTOMIZAR EL FORM CON FORMHELPER
     
-    nombre_razon = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
-    rut = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
-    correo = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
-    telefono = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
-    comuna = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
-    comentario = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'PLACEHOLDER'}))
+    nombre_razon = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Nombre o Razon'}))
+    rut = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Rut'}))
+    correo = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Correo'}))
+    telefono = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Telefono'}))
+    comuna = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Comuna'}))
+    comentario = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Comentario'}))
     class Meta:
         model = InfoContacto #ESTO ME PERMITE HEREDOR LOS CAMPOS DEL MODELO HECHO EN MODELDS
         fields = ['nombre_razon','rut','correo','telefono','comuna','comentario'] #AQUI PERMITO QUE HEREDE TODOS LOS CAMPOS DEL MODELO
         
         #ESTA MIERDE MUESTRA EL FORM Y QUE CAMPOS QUIERO MOSTRAR, PERO MEJOR LO HAGO EN VIEWS
     def __init__(self, *args, **kwargs):
+        calzo = 'px-5 py-2'
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
         self.helper.form_method = 'post'
         self.helper.form_show_labels=False
-        self.helper.layout = Layout(
-                Div(
-                    Div(Field('nombre_razon',css_class='my-2 row'),),
-                    Div(Field('rut',css_class='my-2 row'),),        
-                    Div(Field('correo',css_class='my-2 row'),),               
-                    Div(Field('telefono',css_class='my-2 row'),),                  
-                    Div(Field('comuna',css_class='my-2 row'),),                   
-                    Div(Field('comentario',css_class='my-2 row'),),
-                    css_class='col d-flex justify-content-center', css_id='columna-form'
-                )
+        vl =  Div(
+                    Div(
+                        Field('nombre_razon'),css_class='px-5 py-2 pt-4',),
+                    Div(
+                        Field('rut'),css_class=calzo,),
+                    Div(
+                        Field('correo'),css_class='px-5 py-2',),
+                    Div(
+                        Field('telefono'),css_class='px-5 py-2',),
+                    Div(
+                        Field('comuna'),css_class='px-5 py-2',),
+                    Div(
+                        Field('comentario'),css_class='px-5 py-2',),
+                    Submit('submit','Enviar',css_class='my-5'),
+                        
+                    css_class='col bg-secondary mx-5 rounded',css_id='columna_form',
         )
+        self.helper.layout = Layout(vl)
+        
+        
 """         for field in self.Meta().fields:
             self.helper.layout.append(
                 Field(field, wrapper_class='row mx-auto px-5')

@@ -1,0 +1,22 @@
+form{
+
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+img{
+    width: 400px;
+    max-width: 100%;
+}   
+h1{
+    color: rgb(77, 77, 77);
+}
+
+#submit-id-submit{
+    
+    margin-left: 40%;
+    margin-right: 40%;
+}
+#id_comentario{
+    height: 70px;
+}

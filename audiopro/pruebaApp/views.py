@@ -15,7 +15,7 @@ from pyexpat import model
 from django.shortcuts import render
 from pruebaApp.models import Presentation
 from pruebaApp.forms import FormContacto
-from django.views.generic import ListView, CreateView, DetailView
+from django.views.generic import ListView, CreateView, DetailView, TemplateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -23,7 +23,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import (HTML, Column, Div, Field,
                                 Hidden, Layout, MultiField,
-                                Row, Submit, Fieldset, Submit)
+                                Row, Fieldset, Submit)
 
 class IndexView(ListView):
     model= Presentation
@@ -35,7 +35,7 @@ class IndexView(ListView):
 
 class CrearContacto(CreateView,SuccessMessageMixin):
     form_class= FormContacto
-    template_name='indox.html'
+    template_name='contacto.html'
     success_url= reverse_lazy('pruebaApp:formulario_url')
     success_message= 'GUARDADO COMPLETADO'
 
@@ -45,31 +45,18 @@ class DetalleContacto(DetailView):
     model = Presentation
     template_name = 'detallito.html'
 
+class Inicio(TemplateView):
+    template_name='inicio.html'
+""" 
 def inicio(request):
     #RENDER NECESITA 3 PARAMETROS, REQUEST, DIRECCION TEMPLATE, Y EL CONTEXTO QUE ES OPCIONAL
     return render(request,'inicio.html')
-
+ 
 def hija(request):
     return render(request,'hija.html')
-
-def busqueda_producto(request):
-    return render(request,'busqueda_producto.html')
+"""
 def muestra_productos(request):
     return render(request,'muestra_productos.html')
-
-def respuesta_producto(request):
-    return render(request,'respuesta_producto.html')
-
-def contacto(request):
-    datos = {
-        'titulo':'WENA SHUSHETU',
-        'val1':'valor uno',
-        'val2':'valor dos',
-
-    }
-    if request.method=="POST":
-        return render(request,"gracias.html")
-    return render(request,'contacto.html',datos)
 
 def contactotest(request):
     if request.method=="POST":
