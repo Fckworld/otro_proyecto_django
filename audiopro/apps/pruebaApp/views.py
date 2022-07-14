@@ -10,12 +10,10 @@
 #from django.template import loader
 #modulo para usar metodo get_template
 #TENGO QUE IR A SETTINGS PARA DECIRLE A DJANGO DONDE TIENE QUE CARGAR LAS PLANTILLAS
-from dataclasses import field
-from pyexpat import model
 from django.shortcuts import render
-from pruebaApp.models import Presentation
-from pruebaApp.forms import FormContacto
-from django.views.generic import ListView, CreateView, DetailView, TemplateView
+from apps.pruebaApp.models import Presentation, InfoContacto
+from apps.pruebaApp.forms import FormContacto
+from django.views.generic import ListView, CreateView, DetailView, TemplateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -26,11 +24,18 @@ from crispy_forms.layout import (HTML, Column, Div, Field,
                                 Row, Fieldset, Submit)
 
 class IndexView(ListView):
-    model= Presentation
+    model= InfoContacto
     context_object_name='formulario'
     template_name= 'lista_form.html'
     
-    queryset= Presentation.objects.all()
+    queryset= InfoContacto.objects.all()
+
+class ActualizarContacto(UpdateView):
+    model= InfoContacto
+    form_class= FormContacto
+    template_name='contacto.html'
+    success_url= reverse_lazy('pruebaApp:formulario_url')
+
 
 
 class CrearContacto(CreateView,SuccessMessageMixin):
@@ -55,8 +60,8 @@ def inicio(request):
 def hija(request):
     return render(request,'hija.html')
 """
-def muestra_productos(request):
-    return render(request,'muestra_productos.html')
+class MostrarProductos(TemplateView):
+    template_name = 'muestra_productos.html'
 
 def contactotest(request):
     if request.method=="POST":

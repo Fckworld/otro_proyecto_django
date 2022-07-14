@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Cliente(models.Model):
+    id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     direccion = models.CharField(max_length=50,verbose_name='LA FUCKING DIRECCION') #ESTO SOLO CAMBIA COMO SE MUESTRA AL AGREGAR EN DJANGO ADMIN
     email = models.EmailField(blank=True,null=True) #ESTO PERMITE INGRESAR DATOS EN BLANCO EN ADMIN
@@ -13,12 +14,14 @@ class Cliente(models.Model):
 
 
 class Producto(models.Model):
+    id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     seccion = models.CharField(max_length=50)
     precio = models.IntegerField()
 
 
 class Pedido(models.Model):
+    id = models.AutoField(primary_key=True)
     numero = models.IntegerField()
     fecha =  models.DateField()
     entregado = models.BooleanField()
@@ -34,6 +37,7 @@ class Pedido(models.Model):
 
 class InfoContacto(models.Model):
     
+    id = models.AutoField(primary_key=True)
     nombre_razon = models.CharField(max_length=255)
     rut = models.CharField(max_length=30)
     correo = models.EmailField()
@@ -44,18 +48,21 @@ class InfoContacto(models.Model):
         return " Formulario contacto de: %s "%(self.nombre_razon) #ESTO SOLO SE MUESTRA EN ADMIN
 
 class Speaker(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
 class Track(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=30)
 
     def __str__(self):
         return self.title
 
 class Presentation(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=35)
     abstract = models.TextField(blank=False)
     track = models.ForeignKey(Track, on_delete=models.PROTECT)

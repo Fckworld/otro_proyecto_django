@@ -22,6 +22,7 @@ urlpatterns = [
     #PRIMER PARAMETRO PARA EL DIRECCIONAR CON URL, Y EL SEGUNDO ES EL NOMBRE DE LA FUNCION 
     #QUE ESTA EN LAS VISTAS (NO OLVIDAR IMPORTARLAS).
     path('admin/', admin.site.urls),
-    path('pruebaApp/',include('pruebaApp.urls')),
+    path('pruebaApp/',include('apps.pruebaApp.urls')),
+    path('usuarios/',include('apps.usuarios.urls')),
     
 ]

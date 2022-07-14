@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pruebaApp',
+    'apps.pruebaApp',
+    'apps.usuarios',
     'crispy_forms'
 ]
 
@@ -56,11 +57,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'audiopro.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         
-        'DIRS': (os.path.join(BASE_DIR,'pruebaApp/templates'),),#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
+        'DIRS':'',#AQUI DOY LA RUTA PARA IR DONDE ESTAN LAS PLANTILLAS
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,5 +132,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #DE AQUI HACIA ABAJO EMPIEZO A EDITAR YO, AGREGO ESTOS DIR PARA AGREGAR LOS ARCHIVOS STATICS
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'pruebaApp/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'apps/pruebaApp/static'),)
 

@@ -1,7 +1,7 @@
 from django.contrib import admin
 #AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA PODER MANIPULARLOS
 #DESDE EL PANEL DE CONTROL ADMIN DE DJANGO.
-from pruebaApp.models import Cliente, Producto, Pedido, InfoContacto, Speaker, Track, Presentation
+from apps.pruebaApp.models import Cliente, Producto, Pedido, InfoContacto, Speaker, Track, Presentation
 #AQUI REGISTRARE LAS CLASES CREADAS EN MODELS.PY PARA POD
 
 class ClientesAdmin(admin.ModelAdmin):

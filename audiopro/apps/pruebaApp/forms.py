@@ -1,8 +1,7 @@
-from dataclasses import field
 from django import forms
-from pruebaApp.models import Presentation
+from apps.pruebaApp.models import Presentation
 from crispy_forms.helper import FormHelper
-from pruebaApp.models import InfoContacto
+from apps.pruebaApp.models import InfoContacto
 from crispy_forms.layout import Submit, Layout, HTML, Field, Div, Column,Row
 from crispy_forms.bootstrap import FormActions
 

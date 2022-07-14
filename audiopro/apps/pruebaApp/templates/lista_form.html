@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <h1>Lista de Presentations</h1>
+    <h1>Lista de Contactos</h1>
     <ul>
         {% for p in formulario %}
-            <li>{{ p.title}} - {{ p.abstract }}</li>
+            <li> {{p.pk}} {{p.nombre_razon}} - {{ p.correo}} - {{ p.comentario }}</li>
         {% empty %}
             <li>No articles yet.</li>
         {% endfor %}
